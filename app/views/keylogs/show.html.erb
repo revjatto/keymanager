@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key number:</strong>
+  <%= @keylog.key_number %>
+</p>
+
+<p>
+  <strong>Building:</strong>
+  <%= @keylog.building %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @keylog.floor %>
+</p>
+
+<p>
+  <strong>Room number:</strong>
+  <%= @keylog.room_number %>
+</p>
+
+<p>
+  <strong>Key type:</strong>
+  <%= @keylog.key_type %>
+</p>
+
+<p>
+  <strong>Key ref:</strong>
+  <%= @keylog.key_ref %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @keylog.description %>
+</p>
+
+<p>
+  <strong>Key holder:</strong>
+  <%= @keylog.key_holder %>
+</p>
+
+<p>
+  <strong>Information:</strong>
+  <%= @keylog.information %>
+</p>
+
+<p>
+  <strong>Key with:</strong>
+  <%= @keylog.key_with %>
+</p>
+
+<%= link_to 'Edit', edit_keylog_path(@keylog) %> |
+<%= link_to 'Back', keylogs_path %>

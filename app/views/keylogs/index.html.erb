@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<div class="center jumbotron">
+  
+  
+</div>
+<% if @keylogs.blank? %>
+  <h4>There are no key numbers or descriptions containing the term you search for, try again punk <%= params[:search] %>.</h4>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Key number</th>
+      <th>Building</th>
+      <th>Floor</th>
+      <th>Room number</th>
+      <th>Key type</th>
+      <th>Key ref</th>
+      <th>Description</th>
+      <th>Key holder</th>
+      <th>Information</th>
+      <th>Key with</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @keylogs.each do |keylog| %>
+      <tr>
+        <td><%= keylog.key_number %></td>
+        <td><%= keylog.building %></td>
+        <td><%= keylog.floor %></td>
+        <td><%= keylog.room_number %></td>
+        <td><%= keylog.key_type %></td>
+        <td><%= keylog.key_ref %></td>
+        <td><%= keylog.description %></td>
+        <td><%= keylog.key_holder %></td>
+        <td><%= keylog.information %></td>
+        <td><%= keylog.key_with %></td>
+        <td><%= link_to 'Show', keylog %></td>
+        <td><%= link_to 'Edit', edit_keylog_path(keylog) %></td>
+        <td><%= link_to 'Destroy', keylog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Keylog', new_keylog_path, class: 'btn btn-primary' %>

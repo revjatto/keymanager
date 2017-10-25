@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <li><%= link_to "GC Key Manager", keylogs_path, class: 'navbar-brand' %></li>
+      
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Home", keylogs_path %></li>
+     
+      <li><%= link_to "Create-A-Key", new_keylog_path %></li>
+    </ul>
+    <ul>
+   <li><%= form_tag(keylogs_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Key Manager" %>
+    <%= submit_tag "Search", :name => nil %></li>
+</ul>
+<% end %>
+
+  </div>
+</nav>
+<div class="container">
+  
+     <%= yield %>
+ 
+ 
+</div>
+
+
+</body>
+</html>

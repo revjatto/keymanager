@@ -1,0 +1,68 @@
+
+     o run a Rails application:
+
+Open the terminal and type gem install rails
+When done, type rails new example -d mysql
+Edit your database configuration in config/database.yml
+Type rails s -b $IP -p $PORT
+
+
+
+<p><%= truncate(article.content, length: 550), link_to "Read More" %></p>
+
+
+Create a new username and password for postgresql on cloud9:
+
+ sudo service postgresql start
+sudo sudo -u postgres psql
+CREATE USER revjatto SUPERUSER PASSWORD 'c6h120h';
+postgres=# \q
+Create ENV variables on cloud9:
+
+echo "export USERNAME=username" >> ~/.profile
+echo "export PASSWORD=password" >> ~/.profile
+source ~/.profile
+
+create your database:
+
+rake db:create
+My database.yml for rails 4.2.0 on cloud9:
+
+host: <%= ENV['IP'] %>
+
+echo "# prayer-bulletin" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/revjatto/prayer-bulletin.git
+git push -u origin master
+ http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
+<div class="col-sm-4 col-xs-offset-2">
+    
+
+     <h2>Utilities</h2>
+
+     
+
+     <iframe width="300" height="315" src="https://www.youtube.com/embed/NfXybggH4Qo" frameborder="0" allowfullscreen></iframe>
+     <br/>
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ <!-- Front page - 2 (www.ckwe.co.uk) -->
+ <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-9591689799095900"
+      data-ad-slot="9745791119"
+      data-ad-format="auto"></ins>
+ <script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+ </script>
+ <p></p>
+ <iframe width="300" height="315" src="https://www.youtube.com/embed/MgEY4hdbxGg" frameborder="0" allowfullscreen></iframe>
+
+ <p></p>
+ <iframe width="300" height="315" src="https://www.youtube.com/embed/enMZyFaQStg" frameborder="0" allowfullscreen></iframe>
+
+ <p></p>
+ <iframe width="300" height="315" src="https://www.youtube.com/embed/ZML6pnSkr8I" frameborder="0" allowfullscreen></iframe>
+   </div>
