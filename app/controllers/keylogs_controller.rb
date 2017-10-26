@@ -9,8 +9,7 @@ def index
     @keylogs = Keylog.all
   end
 end
-def blog
-end
+
  
   # GET /keylogs/1
   # GET /keylogs/1.json

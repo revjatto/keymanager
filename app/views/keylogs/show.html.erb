@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Showing Key Details</div>
+      <div class="panel-body">
+      <p>
   <strong>Key number:</strong>
   <%= @keylog.key_number %>
 </p>
@@ -49,6 +52,7 @@
   <strong>Key with:</strong>
   <%= @keylog.key_with %>
 </p>
-
+ </div>
+    </div>
 <%= link_to 'Edit', edit_keylog_path(@keylog) %> |
 <%= link_to 'Back', keylogs_path %>
