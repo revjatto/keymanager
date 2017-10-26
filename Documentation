@@ -40,6 +40,11 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/revjatto/prayer-bulletin.git
 git push -u origin master
+
+git push heroku master
+heroku rake db:migrate
+
+
  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
 <div class="col-sm-4 col-xs-offset-2">

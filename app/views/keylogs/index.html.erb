@@ -4,7 +4,7 @@
   
 </div>
 <% if @keylogs.blank? %>
-  <h4>There are no key numbers or descriptions containing the term you search for, try again punk <%= params[:search] %>.</h4>
+  <h4>There are no key numbers or descriptions containing the term you search for, try again punk <%= params[:search] %>!</h4>
 <% end %>
 
 <table class="table table-striped">
@@ -39,7 +39,7 @@
         <td><%= keylog.key_with %></td>
         <td><%= link_to 'Show', keylog %></td>
         <td><%= link_to 'Edit', edit_keylog_path(keylog) %></td>
-        <td><%= link_to 'Destroy', keylog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
@@ -47,4 +47,3 @@
 
 <br>
 
-<%= link_to 'New Keylog', new_keylog_path, class: 'btn btn-primary' %>
