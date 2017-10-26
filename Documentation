@@ -35,6 +35,8 @@ My database.yml for rails 4.2.0 on cloud9:
 host: <%= ENV['IP'] %>
 
 echo "# prayer-bulletin" >> README.md
+
+github upload
 git init
 git add README.md
 git commit -m "first commit"
@@ -44,6 +46,7 @@ git push -u origin master
 git push heroku master
 heroku rake db:migrate
 
+https://keymanager-revjatto.c9users.io
 
  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 

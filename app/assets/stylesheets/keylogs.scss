@@ -1,3 +1,19 @@
 // Place all the styles related to the keylogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.jumbotron {
+background-image: asset-url('kcl-gif.gif');
+-webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    
+    text-shadow: black 0.3em 0.3em 0.3em;
+   background-attachment: fixed;
+    margin-bottom: 0px;
+    h1, h2, h3{
+         font-family: Graphik Web, Arial, Helvetica, sans-serif;
+        color: #fff !important;
+        letter-spacing: -1px;
+    }
+}
