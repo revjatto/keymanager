@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+
+  get 'pages/blog'
+
   resources :keylogs
-  get 'keylogs/blog'
+ 
   root to: 'keylogs#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
