@@ -78,3 +78,26 @@ https://keymanager-revjatto.c9users.io
  <p></p>
  <iframe width="300" height="315" src="https://www.youtube.com/embed/ZML6pnSkr8I" frameborder="0" allowfullscreen></iframe>
    </div>
+   
+   Setup Devise on your application
+   
+   gem 'devise'
+   
+   Then run bundle install
+   
+   Next, you need to run the generator:
+
+$ rails generate devise:install
+
+At this point, a number of instructions will appear in the console. 
+Among these instructions, you'll need to set up the default URL options for the Devise mailer in each environment. 
+Here is a possible configuration for config/environments/development.rb:
+
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+ rails g devise:views
+ 
+ $ rails generate devise User or Admin
+ 
+ Then run 
+ rake db:migrate

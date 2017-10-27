@@ -10,6 +10,7 @@ gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.4'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'will_paginate'
+gem 'devise', '~> 4.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
