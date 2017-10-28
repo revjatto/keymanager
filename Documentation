@@ -10,6 +10,7 @@ When done, type rails new example -d mysql
 Edit your database configuration in config/database.yml
 Type rails s -b $IP -p $PORT
 
+https://keymanager-revjatto.c9users.io
 
 
 <p><%= truncate(article.content, length: 550), link_to "Read More" %></p>
@@ -78,3 +79,45 @@ https://keymanager-revjatto.c9users.io
  <p></p>
  <iframe width="300" height="315" src="https://www.youtube.com/embed/ZML6pnSkr8I" frameborder="0" allowfullscreen></iframe>
    </div>
+   
+   Setup Devise on your application
+   
+   gem 'devise'
+   
+   Then run bundle install
+   
+   Next, you need to run the generator:
+
+$ rails generate devise:install
+
+At this point, a number of instructions will appear in the console. 
+Among these instructions, you'll need to set up the default URL options for the Devise mailer in each environment. 
+Here is a possible configuration for config/environments/development.rb:
+
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+ rails g devise:views
+ 
+ $ rails generate devise User or Admin
+ 
+ Then run 
+ rake db:migrate
+ 
+ 
+ After pushing my app on heroku, my app crashes.
+ I don't want to make a git rebase before getting heroku last version (if I do so, I'll get fast-forward errors...)
+ heroku rollback --app "your-app-name"
+ 
+ droping a table from the schema
+ I find that it's easiest to use the Rails Console in solving this problem. Suppose you want to remove a 'comments' table from a blog application. You can do so by performing the following tasks from the command line (e.g., Terminal).
+
+Step one:
+
+$ rails console 
+Step two:
+
+$ ActiveRecord::Migration.drop_table(:comments)
+Step three:
+
+$ rake db:migrate
+Go check your schema.rb to see that the table was removed.
